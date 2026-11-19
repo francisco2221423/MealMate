@@ -1,17 +1,12 @@
-//
-//  MealMateApp.swift
-//  MealMate
-//
-//  Created by formando on 18/11/2026.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct MealMateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
+        .modelContainer(for: [FoodEntry.self, UserProfile.self])
     }
 }
