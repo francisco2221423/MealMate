@@ -34,3 +34,8 @@ struct MainTabView: View {
         }
     }
 }
+
+#Preview {
+    MainTabView()
+        .modelContainer(for: [PersistedLogEntry.self, UserProfileRecord.self], inMemory: true)
+}
